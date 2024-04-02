@@ -117,7 +117,7 @@ const Products = () => {
         <Box
           mt="20px"
           display="grid"
-          gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+          gridTemplateColumns="repeat(4, minmax(0, 1fr))" //products grid 4 in each row - can change
           justifyContent="space-between"
           rowGap="20px"
           columnGap="1.33%"

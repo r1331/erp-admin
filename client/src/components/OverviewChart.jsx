@@ -20,14 +20,14 @@ const OverviewChart = ({ isDashboard = false, view }) => {
     // total sales line data
     const totalSalesLine = {
       id: "totalSales",
-      color: theme.palette.secondary.main,
+      color: theme.palette.secondary[200],
       data: [],
     };
 
     // total units line data
     const totalUnitsLine = {
       id: "totalUnits",
-      color: theme.palette.secondary[600],
+      color: theme.palette.secondary[400],
       data: [],
     };
 
@@ -103,7 +103,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
         },
         tooltip: {
           container: {
-            color: theme.palette.primary.main,
+            color: theme.palette.primary[400],
           },
         },
       }}

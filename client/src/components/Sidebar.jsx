@@ -141,7 +141,7 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography
-                    variant="h4"
+                    variant="h3"
                     fontWeight="bold"
                     onClick={() => {
                       navigate("/dashboard");
@@ -150,9 +150,9 @@ const Sidebar = ({
                     sx={{
                       cursor: "pointer",
                     }}
-                    title="ECOMVISION"
+                    title="ERPLUTO" // web app name
                   >
-                    ECOMVISION
+                    ERPLUTO 
                   </Typography>
                 </Box>
                 {/* Mobile Sidebar Toggle Icon */}

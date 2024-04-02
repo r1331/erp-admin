@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  DownloadOutlined,
   Email,
   PointOfSale,
   PersonAdd,
@@ -8,7 +7,6 @@ import {
 } from "@mui/icons-material";
 import {
   Box,
-  Button,
   Typography,
   useTheme,
   useMediaQuery,
@@ -69,28 +67,6 @@ const Dashboard = () => {
       <FlexBetween>
         {/* Header */}
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
-        {/* Content */}
-        <Box>
-          {/* Download Reports */}
-          <Button
-            sx={{
-              backgroundColor: theme.palette.secondary.light,
-              color: theme.palette.background.alt,
-              fontSize: "14px",
-              fontWeight: "bold",
-              padding: "10px 20px",
-
-              "&:hover": {
-                backgroundColor: theme.palette.background.alt,
-                color: theme.palette.secondary.light,
-              },
-            }}
-          >
-            <DownloadOutlined sx={{ mr: "10px" }} />
-            Download Reports
-          </Button>
-        </Box>
       </FlexBetween>
 
       <Box

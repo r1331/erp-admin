@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { Box, useTheme } from "@mui/material";
 
@@ -10,11 +10,19 @@ const Transactions = () => {
   // theme
   const theme = useTheme();
 
-  // values for backend
+  // values to be sent to backend
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
+
+  const [rowCountState, setRowCountState] = useState(0);
+  const totalRowCount = 500;
+  useEffect(() => {
+    if (totalRowCount !== undefined) {
+      setRowCountState(totalRowCount);
+    }
+  }, [totalRowCount]);
 
   // search
   const [searchInput, setSearchInput] = useState("");
@@ -97,7 +105,7 @@ const Transactions = () => {
           getRowId={(row) => row._id}
           rows={(data && data.transactions) || []}
           columns={columns}
-          rowCount={(data && data.total) || 0}
+          rowCount={rowCountState}
           rowsPerPageOptions={[20, 50, 100]}
           pagination
           page={page}

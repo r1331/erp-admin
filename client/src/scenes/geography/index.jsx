@@ -22,7 +22,7 @@ const Geography = () => {
       <Box
         mt="40px"
         height="75vh"
-        border={`1px solid ${theme.palette.secondary[200]}`}
+        border={`1px solid ${theme.palette.secondary[700]}`}
         borderRadius="4px"
       >
         {/* choropleth map */}
@@ -33,37 +33,38 @@ const Geography = () => {
               axis: {
                 domain: {
                   line: {
-                    stroke: theme.palette.secondary[200],
+                    stroke: theme.palette.secondary[700],
                   },
                 },
                 legend: {
                   text: {
-                    fill: theme.palette.secondary[200],
+                    fill: theme.palette.secondary[700],
                   },
                 },
                 ticks: {
                   line: {
-                    stroke: theme.palette.secondary[200],
+                    stroke: theme.palette.secondary[700],
                     strokeWidth: 1,
                   },
                   text: {
-                    fill: theme.palette.secondary[200],
+                    fill: theme.palette.secondary[700],
                   },
                 },
               },
               legends: {
                 text: {
-                  fill: theme.palette.secondary[200],
+                  fill: theme.palette.secondary[700],
                 },
               },
               tooltip: {
                 container: {
-                  color: theme.palette.primary.main,
+                  color: theme.palette.primary[400],
                 },
               },
             }}
             features={geoData.features}
             margin={{ top: 0, right: 0, bottom: 0, left: -50 }}
+            colors="BuGn"
             domain={[0, 60]}
             unknownColor="#666666"
             label="properties.name"
@@ -71,8 +72,8 @@ const Geography = () => {
             projectionScale={150}
             projectionTranslation={[0.45, 0.6]}
             projectionRotation={[0, 0, 0]}
-            borderWidth={1.3}
-            borderColor="#ffffff"
+            borderWidth={0.4}
+            borderColor="#000000"
             legends={[
               {
                 anchor: "bottom-right",
@@ -84,7 +85,7 @@ const Geography = () => {
                 itemWidth: 94,
                 itemHeight: 18,
                 itemDirection: "left-to-right",
-                itemTextColor: theme.palette.secondary[200],
+                itemTextColor: theme.palette.secondary[700],
                 itemOpacity: 0.85,
                 symbolSize: 18,
                 effects: [

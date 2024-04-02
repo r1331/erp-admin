@@ -11,16 +11,12 @@ import {
   Box,
   Typography,
   IconButton,
-  InputBase,
 } from "@mui/material";
 import {
   LightModeOutlined,
   DarkModeOutlined,
   Menu as MenuIcon,
-  Search,
-  SettingsOutlined,
   ArrowDropDownOutlined,
-  GitHub,
 } from "@mui/icons-material";
 
 import { FlexBetween } from ".";
@@ -54,41 +50,18 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
         <FlexBetween>
           {/* Sidebar Menu */}
           <IconButton
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)} //just like that create a login page
             title="Toggle Sidebar"
           >
             <MenuIcon />
           </IconButton>
 
-          {/* Search */}
-          <FlexBetween
-            backgroundColor={theme.palette.background.alt}
-            borderRadius="9px"
-            gap="3rem"
-            p="0.1rem 1.5rem"
-            title="Search"
-          >
-            <InputBase placeholder="Search..." />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </FlexBetween>
+          
         </FlexBetween>
 
-        {/* Right Side */}
+       {/* Right Side */}
         <FlexBetween gap="1.5rem">
-          {/* Source Code */}
-          <IconButton
-            onClick={() =>
-              window.open(
-                "http://www.github.com/sanidhyy/mern-admin/",
-                "_blank"
-              )
-            }
-            title="Source Code"
-          >
-            <GitHub sx={{ fontSize: "25px" }} />
-          </IconButton>
+          
 
           {/* Dark/Light Mode */}
           <IconButton onClick={() => dispatch(setMode())} title="Dark Mode">
@@ -99,10 +72,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
             )}
           </IconButton>
 
-          {/* Settings */}
-          <IconButton title="Setting">
-            <SettingsOutlined sx={{ fontSize: "25px" }} />
-          </IconButton>
+
 
           {/* User */}
           <FlexBetween>
